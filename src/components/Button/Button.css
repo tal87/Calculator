@@ -1,0 +1,13 @@
+button {
+  outline: none;
+  border: none;
+  width: 100px;
+  border: 1px solid rgb(50, 50, 50);
+  border-width: 0px 1px 1px 0px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.opButton {
+  background-color: rgb(107, 53, 184);
+}
