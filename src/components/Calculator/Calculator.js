@@ -7,7 +7,12 @@ import Display from "../Display/Display";
 const Calculator = () => {
   //boxShadow: "10px 10px #fff"
   return (
-    <div style={{ width: "300px" }}>
+    <div
+      style={{
+        width: "300px",
+        boxShadow: "10px 10px 10px 3px rgb(50, 50, 50)"
+      }}
+    >
       <Display />
       <div className="row">
         <Button
