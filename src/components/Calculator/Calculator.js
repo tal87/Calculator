@@ -7,7 +7,7 @@ import Display from "../Display/Display";
 const Calculator = () => {
   //boxShadow: "10px 10px #fff"
   return (
-    <div style={{ width: "400px" }}>
+    <div style={{ width: "300px" }}>
       <Display />
       <div className="row">
         <Button
@@ -15,7 +15,7 @@ const Calculator = () => {
           type={types.CLEAR_CLICK}
           style={{
             background: "#730000",
-            width: "200px",
+            width: "150px",
             color: "#C6C6C6",
             borderLeft: "1px solid #000"
           }}
@@ -66,7 +66,7 @@ const Calculator = () => {
           value="0"
           text="0"
           type={types.NUM_CLICK}
-          style={{ width: "200px" }}
+          style={{ width: "150px" }}
           class="number"
         />
         <Button text="." type={types.NUM_CLICK} class="number" />
