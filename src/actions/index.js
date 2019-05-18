@@ -1,10 +1,8 @@
-import * as actionTypes from "./types";
-
-const onOperatorClick = operator => {
+const onButtonClick = (type, content) => {
   return {
-    type: actionTypes.OPERATOR_CLICK,
-    payload: operator
+    type,
+    payload: content
   };
 };
 
-export { onOperatorClick };
+export { onButtonClick };
