@@ -45,6 +45,10 @@ export default combineReducers({
     switch (action.type) {
       case actionTypes.NUM_CLICK:
         let isInteger = state[currentOperand].isInteger;
+        if (state.finish) {
+          currentNum = "0";
+        }
+
         if (action.payload === ".") {
           // we do not allow 2 floating points
           if (!isInteger) {
@@ -63,7 +67,8 @@ export default combineReducers({
         return {
           ...state,
           [currentOperand]: { isInteger: isInteger, num: currentNum },
-          display: currentNum
+          display: currentNum,
+          finish: false
         };
       case actionTypes.OPERATOR_CLICK:
         if (state.operator) {
@@ -88,7 +93,8 @@ export default combineReducers({
         return {
           ...INITIAL_STATE,
           op1: { num: res, isInteger: Number.isInteger(res) },
-          display: res
+          display: res,
+          finish: true
         };
       case actionTypes.CLEAR_CLICK:
         return INITIAL_STATE;
