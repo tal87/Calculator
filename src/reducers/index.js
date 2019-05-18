@@ -21,7 +21,7 @@ const calcResult = state => {
     case "-":
       res = num1 - num2;
       break;
-    case "X":
+    case "x":
       res = num1 * num2;
       break;
     case "÷":

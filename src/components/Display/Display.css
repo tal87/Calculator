@@ -1,6 +1,9 @@
 .display {
-  width: 400px;
   height: 100px;
-  background: red;
+  /* background: black; */
+  background-color: #5b5b5b;
+  color: white;
   margin: 0 auto;
+  border: 1px solid black;
+  border-bottom: 0px;
 }
