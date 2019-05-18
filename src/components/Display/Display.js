@@ -11,7 +11,8 @@ const Display = props => {
         flexDirection: "column",
         backgroundColor: "#5b5b5b",
         border: "1px solid black",
-        fontSize: "20px"
+        fontSize: "20px",
+        borderRadius: "7px 7px 0px 0px"
       }}
     >
       <div className="operator">{props.operator}</div>

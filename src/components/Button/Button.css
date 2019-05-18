@@ -21,3 +21,11 @@ button {
   background-color: #5b5b5b;
   color: rgb(147, 147, 147);
 }
+
+/* .row:last-of-type button:last-of-type {
+  border-bottom-right-radius: 7px;
+}
+
+.row:last-of-type button:first-of-type {
+  border-bottom-left-radius: 7px;
+} */
