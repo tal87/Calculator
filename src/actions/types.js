@@ -1,0 +1,3 @@
+const OPERATOR_CLICK = "OPERATOR_CLICK";
+
+export { OPERATOR_CLICK };

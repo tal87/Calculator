@@ -28,7 +28,6 @@ class App extends React.Component {
     let currentOperandKey = this.state["currentOperand"];
     let currentOperand = this.state[currentOperandKey];
     currentOperand = currentOperand * 10 + operand;
-    console.log(currentOperandKey);
     this.setState({ [currentOperandKey]: currentOperand, res: currentOperand });
   }
 
@@ -114,6 +113,7 @@ class App extends React.Component {
             text="÷"
             class="opButton"
             onClick={e => this.onOperatorClick(e)}
+            type="operator"
           />
         </div>
         <div className="row">
@@ -125,6 +125,7 @@ class App extends React.Component {
             text="X"
             class="opButton"
             onClick={e => this.onOperatorClick(e)}
+            type="operator"
           />
         </div>
         <div className="row">
@@ -136,6 +137,7 @@ class App extends React.Component {
             text="-"
             class="opButton"
             onClick={e => this.onOperatorClick(e)}
+            type="operator"
           />
         </div>
         <div className="row">
@@ -147,6 +149,7 @@ class App extends React.Component {
             text="+"
             class="opButton"
             onClick={e => this.onOperatorClick(e)}
+            type="operator"
           />
         </div>
         <div className="row">
