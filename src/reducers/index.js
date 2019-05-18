@@ -13,18 +13,29 @@ const INITIAL_STATE = {
 const calcResult = state => {
   let num1 = Number(state.op1.num);
   let num2 = Number(state.op2.num);
+  let res;
   switch (state.operator) {
     case "+":
-      return num1 + num2;
+      res = num1 + num2;
+      break;
     case "-":
-      return num1 - num2;
+      res = num1 - num2;
+      break;
     case "X":
-      return num1 * num2;
+      res = num1 * num2;
+      break;
     case "÷":
-      return num1 / num2;
+      res = num1 / num2;
+      break;
     default:
       return "";
   }
+
+  if (!Number.isInteger(res)) {
+    res = Number(res.toFixed(5));
+  }
+
+  return res;
 };
 
 export default combineReducers({
