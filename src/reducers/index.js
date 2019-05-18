@@ -29,10 +29,10 @@ const calcResult = state => {
 
 export default combineReducers({
   calculatorState: (state = INITIAL_STATE, action) => {
+    let currentOperand = state.currentOperand;
+    let currentNum = state[currentOperand].num;
     switch (action.type) {
       case actionTypes.NUM_CLICK:
-        let currentOperand = state.currentOperand;
-        let currentNum = state[currentOperand].num;
         let isInteger = state[currentOperand].isInteger;
         if (action.payload === ".") {
           // we do not allow 2 floating points
@@ -81,6 +81,14 @@ export default combineReducers({
         };
       case actionTypes.CLEAR_CLICK:
         return INITIAL_STATE;
+      case actionTypes.POSITIVE_NEGATIVE_CLICK:
+        currentOperand = state.currentOperand;
+        currentNum = (Number(currentNum) * -1).toString();
+        return {
+          ...state,
+          [currentOperand]: { ...state[currentOperand], num: currentNum },
+          display: currentNum
+        };
       default:
         return state;
     }

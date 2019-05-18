@@ -20,7 +20,7 @@ class App extends React.Component {
             type={types.CLEAR_CLICK}
             style={{ background: "rgb(255, 210, 205)", width: "200px" }}
           />
-          <Button text="+/-" />
+          <Button text="+/-" type={types.POSITIVE_NEGATIVE_CLICK} />
           <Button
             value="÷"
             text="÷"
