@@ -3,10 +3,8 @@ import React from "react";
 import * as types from "../../actions/types";
 import Button from "../Button/Button";
 import Display from "../Display/Display";
-import { SSL_OP_TLS_ROLLBACK_BUG } from "constants";
 
 const Calculator = () => {
-  //boxShadow: "10px 10px #fff"
   return (
     <div
       style={{
